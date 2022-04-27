@@ -3,13 +3,15 @@ package main
 import (
 	"fmt"
 	"go-grand/oop"
+	"go-grand/routine"
 )
 
 func main() {
-	testConstruct()
-	testInherit()
-	testOop()
-	testInterface()
+	//testConstruct()
+	//testInherit()
+	//testOop()
+	//testInterface()
+	testGoroutine()
 }
 
 func testConstruct() {
@@ -48,4 +50,9 @@ func testInterface() {
 	person := oop.Person{"zhw"}
 	person.Play(oop.Cat{"中华田园猫", 1})
 	person.Play(oop.Dog{"哈士奇", 2})
+}
+
+func testGoroutine() {
+	go routine.ShowMessage("java")
+	routine.ShowMessage("golang")
 }
